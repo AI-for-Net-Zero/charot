@@ -1,0 +1,5 @@
+outputs/
+*.png
+*.dat
+*.pkl
+.idea/
