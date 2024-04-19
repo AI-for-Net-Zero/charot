@@ -45,7 +45,7 @@ optim:
 
 # network
 network:
-  architecture: attention  # one of base, lstm, attention, buffer, gru, attention2, attentionLSTMBuffer, buffer_lstm
+  architecture: attention  # one of base, lstm, attention
   actor_hidden_sizes: [256, 256]
   critic_hidden_sizes: [512, 512, 512]
   sac_critic_hidden_sizes: [256, 256]
