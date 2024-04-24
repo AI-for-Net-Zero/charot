@@ -5,7 +5,7 @@ from solver.KS_solver import KS
 import torch
 
 
-def contourplot_KS(uu, N=256, dt=0.5, num_plot_points=1000, plot_frame=False, frameskip=1, filename=''):
+def contourplot_KS(uu, dt=0.5, num_plot_points=1000, plot_frame=False, frameskip=1, filename=''):
     # Make contour plot of solution
     fig, ax = plt.subplots()
     tt = np.arange(uu.shape[0]) * dt
@@ -13,7 +13,6 @@ def contourplot_KS(uu, N=256, dt=0.5, num_plot_points=1000, plot_frame=False, fr
     x = np.arange(0, 2 * np.pi, 2 * np.pi / N)
     ct = ax.contourf(x, tt[:num_plot_points][:num_plot_points][::frameskip], uu[:num_plot_points][::frameskip],
                      61,
-                     #extend='both',
                      cmap=cm.RdBu,
                      vmin=-2.5,
                      vmax=2.5)
@@ -42,10 +41,6 @@ if __name__ == '__main__':
     u = 1e-2 * np.random.normal(size=N)  # noisy intial data
     u = u - u.mean()
     u = torch.tensor(u)
-
-    # Stationary initial data - only for nu = 0.08156697852139966
-    #u = np.loadtxt('../solver/solutions/u1.dat')
-    #u = torch.tensor(u)
 
     action = torch.zeros(ks.num_actuators)
     action1 = torch.ones(ks.num_actuators)
@@ -79,7 +74,7 @@ if __name__ == '__main__':
         uu.append(u.detach().numpy())
     uu = np.array(uu)
 
-    contourplot_KS(uu, N=N, dt=dt, plot_frame=True, frameskip=2, filename=f'{nu:.3f}')
+    contourplot_KS(uu, dt=dt, plot_frame=True, frameskip=2, filename=f'{nu:.3f}')
 
 
     reward = np.mean(np.linalg.norm(uu, axis=-1))
