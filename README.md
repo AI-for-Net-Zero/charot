@@ -2,11 +2,9 @@
 
 This repository contains the source code accompanying the paper
 
-*CHAROT: Robustly controlling chaotic PDEs with partial observations*
+[CHAROT: Robustly controlling chaotic PDEs with partial observations](https://openreview.net/pdf?id=SytuCWihJr)
 
-by Max Weissenbacher, Anastasia Borovykh and Georgios Rigas
-
-(Accepted at the ICLR 2024 Workshop on AI4Differential Equations in Science.)
+Accepted at the ICLR 2024 Workshop on AI4Differential Equations in Science.
 
 # How to run
 
