@@ -1,0 +1,26 @@
+[project]
+name = "CHAROT"
+version = "1.0.0"
+license = {file = "LICENSE"}
+dynamic = ["readme", "dependencies"]
+description = ""
+classifiers = [""]
+
+[[project.authors]]
+name = "Dr Max Weissenbacher"
+email = "m.weissenbacher@imperial.ac.uk"
+
+[project.optional-dependencies]
+dev = ["pytest", "coverage", "sphinx", "sphinx-rtd-theme"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+readme = {file = "README.md"}
+dependencies = {file = ["requirements.txt"]}
+

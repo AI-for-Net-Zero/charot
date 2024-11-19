@@ -3,3 +3,7 @@ outputs/
 *.dat
 *.pkl
 .idea/
+**.egg-info/
+*~
+/build/
+/.venv/
