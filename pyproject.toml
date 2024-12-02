@@ -10,6 +10,10 @@ classifiers = [""]
 name = "Dr Max Weissenbacher"
 email = "m.weissenbacher@imperial.ac.uk"
 
+[project.scripts]
+charot-tqc = "charot:tqc"
+charot-plot = "charot.plot:plotting"
+
 [project.optional-dependencies]
 dev = ["pytest", "coverage", "sphinx", "sphinx-rtd-theme"]
 
