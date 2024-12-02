@@ -1,8 +1,8 @@
 from tensordict.nn import TensorDictModule, TensorDictSequential
 from torch import nn
 from torchrl.modules import MLP, LSTMModule
-from models.memoryless.base import tqc_critic_net
-from utils.device_finder import network_device
+from ..memoryless.base import tqc_critic_net
+from ...utils.device_finder import network_device
 
 
 def lstm_actor(cfg, action_spec, in_keys=None, out_keys=None):

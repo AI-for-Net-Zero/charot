@@ -10,8 +10,8 @@ from torchrl.data import CompositeSpec, UnboundedContinuousTensorSpec, BoundedTe
 from torchrl.envs import EnvBase, Compose, DoubleToFloat, EnvCreator, ParallelEnv, TransformedEnv
 from torchrl.envs.transforms import InitTracker, RewardSum, StepCounter, FiniteTensorDictCheck, ObservationNorm
 from torchrl.envs.utils import check_env_specs
-from solver.KS_solver import KS
-from plot.plotting import contourplot_KS
+from .KS_solver import KS
+from ..plot.plotting import contourplot_KS
 
 
 class KSenv(EnvBase):

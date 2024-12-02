@@ -3,8 +3,8 @@ from torch import nn
 from torch.nn import Module
 from torchrl.modules import MLP, LSTMModule
 from tensordict.tensordict import TensorDictBase, NO_DEFAULT
-from models.memoryless.base import tqc_critic_net
-from utils.device_finder import network_device
+from ..memoryless.base import tqc_critic_net
+from ...utils.device_finder import network_device
 
 
 class LSTMBufferModule(TensorDictModuleBase):

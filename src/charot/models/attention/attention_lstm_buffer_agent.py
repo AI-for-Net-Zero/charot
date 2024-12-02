@@ -6,9 +6,9 @@ from tensordict.nn import InteractionType, TensorDictModule, TensorDictSequentia
 from tensordict.tensordict import TensorDict, TensorDictBase
 from tensordict.tensordict import NO_DEFAULT
 from torchrl.modules import MLP
-from models.memoryless.base import tqc_critic_net
-from utils.device_finder import network_device
-from models.attention.transformers import SelfAttentionLayer, SelfAttentionLayerIdentityReordered, Gate, SigmoidLinear
+from ..memoryless.base import tqc_critic_net
+from ...utils.device_finder import network_device
+from .transformers import SelfAttentionLayer, SelfAttentionLayerIdentityReordered, Gate, SigmoidLinear
 
 
 class SelfAttentionLSTMMemoryActor(TensorDictModuleBase):

@@ -11,11 +11,11 @@ name = "Dr Max Weissenbacher"
 email = "m.weissenbacher@imperial.ac.uk"
 
 [project.scripts]
-charot-tqc = "charot:tqc"
-charot-plot = "charot.plot:plotting"
+charot-tqc = "charot.tqc:main"
+charot-plot = "charot.plot:main"
 
 [project.optional-dependencies]
-dev = ["pytest", "coverage", "sphinx", "sphinx-rtd-theme"]
+dev = ["pytest", "coverage", "sphinx", "sphinx-rtd-theme", "ruff"]
 
 [build-system]
 requires = ["setuptools"]
