@@ -26,16 +26,20 @@ from tensordict.tensordict import TensorDict, TensorDictBase
 from torchrl.envs.transforms.transforms import TensorDictPrimer
 from torchrl.data import UnboundedContinuousTensorSpec
 from typing import Tuple
-from solver.KS_environment import KSenv
-from models.attention.attention_agent import SelfAttentionMemoryActor, SelfAttentionMemoryCritic
-from models.attention.attention_onememory_agent import SelfAttentionMemoryActor2, SelfAttentionMemoryCritic2
-from models.attention.attention_buffer_agent import SelfAttentionBufferMemoryActor, SelfAttentionBufferMemoryCritic
-from models.attention.attention_lstm_buffer_agent import SelfAttentionLSTMMemoryActor, SelfAttentionLSTMMemoryCritic
-from models.lstm.buffer_lstm import buffer_lstm_actor, buffer_lstm_critic
-from models.lstm.lstm import lstm_actor, lstm_critic
-from models.memoryless.base import basic_actor, basic_tqc_critic
-from utils.device_finder import network_device
-from utils.rng import env_seed
+from .solver.KS_environment import KSenv
+from .models.attention import (SelfAttentionMemoryActor,
+                               SelfAttentionMemoryCritic,
+                               SelfAttentionMemoryActor2,
+                               SelfAttentionMemoryCritic2,
+                               SelfAttentionBufferMemoryActor,
+                               SelfAttentionBufferMemoryCritic,
+                               SelfAttentionLSTMMemoryActor,
+                               SelfAttentionLSTMMemoryCritic)
+from .models.lstm.buffer_lstm import buffer_lstm_actor, buffer_lstm_critic
+from .models.lstm.lstm import lstm_actor, lstm_critic
+from .models.memoryless.base import basic_actor, basic_tqc_critic
+from .utils.device_finder import network_device
+from .utils.rng import env_seed
 import wandb
 
 

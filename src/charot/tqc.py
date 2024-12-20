@@ -8,8 +8,8 @@ from tensordict import TensorDict
 from torchrl.envs.utils import ExplorationType, set_exploration_type
 import wandb
 import matplotlib.pyplot as plt
-from utils.experiment_name import generate_exp_name
-from agents_tqc import (
+
+from .agents_tqc import (
     log_metrics_offline,
     log_metrics_wandb,
     make_collector,
@@ -19,8 +19,10 @@ from agents_tqc import (
     make_tqc_optimizer,
     make_ks_env,
 )
-from utils.rng import env_seed
-from utils.plot import contourplot_KS
+
+from .utils.experiment_name import generate_exp_name
+from .utils.rng import env_seed
+from .utils.plot import contourplot_KS
 
 
 @hydra.main(version_base="1.1", config_path="", config_name="config")
